@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material"
+import { AppBar, Box, Button, IconButton, Toolbar, Tooltip } from "@mui/material"
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import Link from 'next/link';
 import { useContext, useState } from "react";
@@ -10,7 +10,8 @@ import InputBase from '@mui/material/InputBase';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import Badge from '@mui/material/Badge';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const options = [
     'Mi cuenta',
     'Pedidos',
@@ -22,6 +23,15 @@ const options2 = [
     'Lleno',
 ];
 const ITEM_HEIGHT = 48;
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+    '& .MuiBadge-badge': {
+        right: -3,
+        top: 13,
+        border: `2px solid ${theme.palette.background.paper}`,
+        padding: '0 4px',
+    },
+}));
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -87,8 +97,8 @@ const Navbar = ({ navbarItems }) => {
     return (
         <AppBar position="static" sx={{ backgroundColor: "#E5E5E5" }}>
             <Toolbar>
-                <IconButton edge="start" onClick={openSideMenu} color="inherit" size="large" sx={{ display: { xs: "flex", md: "none" }}}>
-                    <ListOutlinedIcon/>
+                <IconButton edge="start" onClick={openSideMenu} color="inherit" size="large" sx={{ display: { xs: "flex", md: "none" } }}>
+                    <ListOutlinedIcon />
                 </IconButton>
                 <Box sx={{ display: { xs: "none", md: "flex", flexGrow: 1 } }}>
                     {
@@ -124,7 +134,9 @@ const Navbar = ({ navbarItems }) => {
                         aria-haspopup="true"
                         onClick={handleClick}
                     >
-                        <AccountCircleIcon />
+                        <Tooltip title="Usuario">
+                            <AccountCircleIcon />
+                        </Tooltip>
                     </IconButton>
                     <Menu
                         id="long-menu"
@@ -149,16 +161,20 @@ const Navbar = ({ navbarItems }) => {
                     </Menu>
                 </div>
                 <div>
-                    <IconButton
-                        aria-label="more"
-                        id="long-button"
-                        aria-controls={open2 ? 'long-menu' : undefined}
-                        aria-expanded={open2 ? 'true' : undefined}
-                        aria-haspopup="true"
-                        onClick={handleClick2}
-                    >
-                        <ShoppingCartCheckoutIcon />
-                    </IconButton>
+                    <Tooltip title="Compre algo :c">
+                        <IconButton
+                            aria-label="cart"
+                            id="long-button"
+                            aria-controls={open2 ? 'long-menu' : undefined}
+                            aria-expanded={open2 ? 'true' : undefined}
+                            aria-haspopup="true"
+                            onClick={handleClick2}
+                        >
+                            <StyledBadge badgeContent={3} color="primary">
+                                <ShoppingCartIcon />
+                            </StyledBadge>
+                        </IconButton>
+                    </Tooltip>
                     <Menu
                         id="long-menu"
                         MenuListProps={{

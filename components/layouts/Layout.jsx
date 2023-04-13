@@ -46,7 +46,7 @@ const Layout = ({ children, title = "Coloque titulo de pagina" }) => {
             {/*Sidebar */}
             <Sidebar navbarItems={navbarItems}/>
             {/*Main */}
-            <Box sx={{ padding: "10px 20px" }} >
+            <Box>
                 {children}
             </Box>
         </Box>
