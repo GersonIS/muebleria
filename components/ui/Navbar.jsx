@@ -12,16 +12,19 @@ import MenuItem from '@mui/material/MenuItem';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 const options = [
     'Mi cuenta',
     'Pedidos',
     'Datos de cuenta',
 ];
+
 const options2 = [
     'Vacio',
     'Maso',
     'Lleno',
 ];
+
 const ITEM_HEIGHT = 48;
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -79,21 +82,28 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Navbar = ({ navbarItems }) => {
     const [anchorEl, setAnchorEl] = useState(null)
     const open = Boolean(anchorEl);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
     const handleClose = () => {
         setAnchorEl(null);
     };
+
     const [anchorEl2, setAnchorEl2] = useState(null)
     const open2 = Boolean(anchorEl2);
+
     const handleClick2 = (event) => {
         setAnchorEl2(event.currentTarget);
     };
+
     const handleClose2 = () => {
         setAnchorEl2(null);
     };
+
     const { openSideMenu } = useContext(UiContext);
+    
     return (
         <AppBar position="static" sx={{ backgroundColor: "#E5E5E5" }}>
             <Toolbar>
@@ -113,6 +123,7 @@ const Navbar = ({ navbarItems }) => {
                 </Box>
                 <Image
                     src={"/logo-nicole.png"}
+                    alt="Logo"
                     width={100}
                     height={100}
                 />

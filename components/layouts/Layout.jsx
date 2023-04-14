@@ -37,14 +37,14 @@ const navbarItems = [
 
 const Layout = ({ children, title = "Coloque titulo de pagina" }) => {
     return (
-        <Box  sx={{ flexFlow: 1 }}>
+        <Box sx={{ flexFlow: 1 }}>
             <Head>
                 <title>{title}</title>
             </Head>
             {/*Navbar */}
-            <Navbar navbarItems={navbarItems}/>
+            <Navbar navbarItems={navbarItems} />
             {/*Sidebar */}
-            <Sidebar navbarItems={navbarItems}/>
+            <Sidebar navbarItems={navbarItems} />
             {/*Main */}
             <Box>
                 {children}
