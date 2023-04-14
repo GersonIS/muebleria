@@ -37,7 +37,7 @@ export default function Home() {
       <Grid container sx={{ justifyContent: "center" }}>
         <Typography variant="h5">Muebles más vendidos</Typography>
         <Grid item xs={12} marginTop={2}>
-          <Typography variant="body2" sx={{ paddingLeft: 5, paddingRight: 5 }}>
+          <Typography variant="body2" sx={{ paddingLeft: 5, paddingRight: 5, textAlign: "justify" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.
             Error quae necessitatibus neque iure velit eius harum, in vitae. Voluptatum totam sequi corrupti laborum!
           </Typography>

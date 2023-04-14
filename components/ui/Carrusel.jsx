@@ -6,7 +6,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Grid } from '@mui/material';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -82,43 +82,47 @@ const imagenes = [
 
 export const Carrusel = () => {
     return (
-        <Swiper
-            // install Swiper modules
-            modules={[Navigation, Pagination, A11y]}
-            slidesPerView={4}
-            navigation
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
-        >
-            {
-                imagenes.map((el, index) => {
-                    return <SwiperSlide key={index}>
-                        <Card sx={{ maxWidth: 250, textAlign: "center", marginLeft: "37px", marginBottom: 3, marginTop: 4 }}>
-                            <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    height="150"
-                                    image={el.url}
-                                    alt={el.alt}
-                                />
-                                <CardContent sx={{ backgroundColor: "#E5E5E5" }}>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {el.title}
-                                    </Typography>
-                                    <Typography variant="body2">
-                                        {el.description}
-                                    </Typography>
-                                    <Typography variant="body2">
-                                        {el.price}
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </SwiperSlide>
-                })
-            }
-            ...
-        </Swiper >
+        <Grid container sx={{ display: "flex", justifyContent: "center" }}>
+            <Grid item xs={12} sm={10} md={7}>
+                <Swiper
+                    // install Swiper modules
+                    modules={[Navigation, Pagination, A11y]}
+                    slidesPerView={3}
+                    navigation
+                    pagination={{ clickable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                >
+                    {
+                        imagenes.map((el, index) => {
+                            return <SwiperSlide key={index}>
+                                <Card sx={{ maxWidth: 250, textAlign: "center", marginBottom: 3, marginTop: 4 }}>
+                                    <CardActionArea>
+                                        <CardMedia
+                                            component="img"
+                                            height="190"
+                                            image={el.url}
+                                            alt={el.alt}
+                                        />
+                                        <CardContent sx={{ backgroundColor: "#E5E5E5" }}>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {el.title}
+                                            </Typography>
+                                            <Typography variant="body2">
+                                                {el.description}
+                                            </Typography>
+                                            <Typography variant="body2">
+                                                Precio - {el.price}
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                </Card>
+                            </SwiperSlide>
+                        })
+                    }
+                    ...
+                </Swiper >
+            </Grid>
+        </Grid>
     );
 };

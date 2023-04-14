@@ -103,7 +103,7 @@ const Navbar = ({ navbarItems }) => {
     };
 
     const { openSideMenu } = useContext(UiContext);
-    
+
     return (
         <AppBar position="static" sx={{ backgroundColor: "#E5E5E5" }}>
             <Toolbar>
@@ -121,12 +121,14 @@ const Navbar = ({ navbarItems }) => {
                         })
                     }
                 </Box>
-                <Image
-                    src={"/logo-nicole.png"}
-                    alt="Logo"
-                    width={100}
-                    height={100}
-                />
+                <Link style={{ textDecoration: 'none', color: "#727272", marginBottom: "-7px" }} href="/">
+                    <Image
+                        src={"/logo-nicole.png"}
+                        alt="Logo"
+                        width={100}
+                        height={100}
+                    />
+                </Link>
                 <Search sx={{ marginLeft: "10px" }}>
                     <SearchIconWrapper>
                         <SearchIcon />

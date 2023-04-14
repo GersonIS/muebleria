@@ -25,12 +25,12 @@ const navbarItems = [
     },
     {
         title: "Blog",
-        path: "/",
+        path: "/blog",
         icon: <DescriptionIcon />
     },
     {
         title: "Contacto",
-        path: "/",
+        path: "/contacto",
         icon: <ConnectWithoutContactOutlinedIcon />
     }
 ]
