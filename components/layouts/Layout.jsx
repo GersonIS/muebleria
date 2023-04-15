@@ -10,17 +10,17 @@ import { Navbar, Sidebar } from "../ui";
 const navbarItems = [
     {
         title: "Muebles Hogar",
-        path: "/",
+        path: "/muebles/hogar",
         icon: <ChairIcon />
     },
     {
         title: "Muebles Negocio",
-        path: "/",
+        path: "/muebles/negocio",
         icon: <EventSeatIcon />
     },
     {
         title: "Entrega Inmediata",
-        path: "/",
+        path: "/entrega",
         icon: <LocalShippingIcon />
     },
     {

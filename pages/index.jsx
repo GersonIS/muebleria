@@ -8,7 +8,7 @@ const imagenes = [
     alt: "Tipo 1",
     title: 'Oficina',
     width: '40%',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     price: "200"
   },
   {
@@ -16,7 +16,7 @@ const imagenes = [
     alt: "Tipo 2",
     title: 'Hogar',
     width: '30%',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     price: "200"
   },
   {
@@ -24,7 +24,7 @@ const imagenes = [
     alt: "Tipo 3",
     title: 'Catalogo',
     width: '30%',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     price: "200"
   }
 ]

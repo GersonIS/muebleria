@@ -2,8 +2,8 @@ import { Layout } from "@/components/layouts"
 
 const index = () => {
   return (
-    <Layout title="Blog">
-      <div>Blog</div>
+    <Layout title="Entrega Inmediata">
+        <div>Entrega</div>
     </Layout>
   )
 }

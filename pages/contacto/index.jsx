@@ -101,11 +101,10 @@ const index = () => {
                     <Box sx={{ textAlign: "center", marginBottom: 2 }}>
                         <Typography variant="h4" color="#727272">Visitanos</Typography>
                     </Box>
-                    <Box sx={{ borderRadius: 2, boxShadow: 7 }} >
+                    <Box sx={{ borderRadius: 2, boxShadow: 7, width: "100%" }} >
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.8756977185351!2d-79.04422681708576!3d-8.100342810676503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3dbdd759c11f%3A0x795fb99a31c59a1a!2sMuebleria%20Nicoll!5e0!3m2!1ses!2spe!4v1681448549820!5m2!1ses!2spe"
-                            width="600" height="550" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            width="100%" height="550" style={{ border: 0 }} loading="lazy"></iframe>
                     </Box>
-
                 </Grid>
             </Grid>
         </Layout>

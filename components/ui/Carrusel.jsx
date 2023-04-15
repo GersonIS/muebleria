@@ -19,63 +19,63 @@ const imagenes = [
         url: "/img/tipo1.jpeg",
         alt: "Tipo 1",
         title: 'Oficina',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo2.jpeg",
         alt: "Tipo 2",
         title: 'Hogar',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo3.jpg",
         alt: "Tipo 3",
         title: 'Catalogo',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo2.jpeg",
         alt: "Tipo 4",
         title: 'Hogar',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo3.jpg",
         alt: "Tipo 5",
         title: 'Catalogo',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo2.jpeg",
         alt: "Tipo 6",
         title: 'Hogar',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo3.jpg",
         alt: "Tipo 7",
         title: 'Catalogo',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo2.jpeg",
         alt: "Tipo 8",
         title: 'Hogar',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     },
     {
         url: "/img/tipo3.jpg",
         alt: "Tipo 9",
         title: 'Catalogo',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, labore nesciunt amet harum quidem.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         price: "200"
     }
 ]
@@ -90,12 +90,10 @@ export const Carrusel = () => {
                     slidesPerView={3}
                     navigation
                     pagination={{ clickable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
                 >
                     {
                         imagenes.map((el, index) => {
-                            return <SwiperSlide key={index}>
+                            return <SwiperSlide key={index} style={{paddingBottom: "10px"}}>
                                 <Card sx={{ maxWidth: 250, textAlign: "center", marginBottom: 3, marginTop: 4 }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -108,10 +106,10 @@ export const Carrusel = () => {
                                             <Typography gutterBottom variant="h5" component="div">
                                                 {el.title}
                                             </Typography>
-                                            <Typography variant="body2">
+                                            <Typography variant="span">
                                                 {el.description}
                                             </Typography>
-                                            <Typography variant="body2">
+                                            <Typography variant="body2" sx={{marginTop: 1}}>
                                                 Precio - {el.price}
                                             </Typography>
                                         </CardContent>
@@ -120,7 +118,6 @@ export const Carrusel = () => {
                             </SwiperSlide>
                         })
                     }
-                    ...
                 </Swiper >
             </Grid>
         </Grid>

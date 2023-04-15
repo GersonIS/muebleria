@@ -3,3 +3,4 @@ export * from "./Sidebar";
 export * from "./Slider";
 export * from "./Carrusel";
 export * from "./Tipo";
+export * from "./Catalogo";
